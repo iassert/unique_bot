@@ -1,0 +1,13 @@
+[Unit]
+Description=unique_bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/unique_bot/
+ExecStart=python3.10 /root/unique_bot/__main__.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
